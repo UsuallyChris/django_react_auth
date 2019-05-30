@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     'rest_framework',
     'rest_framework.authtoken',
     'rest_auth',
+    'cors-headers',
 
     # LOCAL APPS
     'users.apps.UsersConfig'
@@ -55,6 +56,10 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+
+    # THIRD PARTY MIDDLEWARE
+    'corsheaders.middleware.CorsMiddleware',
+    'django.middleware.common.CommonMiddleware'
 ]
 
 ROOT_URLCONF = '_core.urls'
@@ -139,3 +144,10 @@ REST_FRAMEWORK = {
         'rest_framework.authentication.TokenAuthentication'
     ]
 }
+
+
+# CORS-HEADERS CONFIG
+
+CORS_ORIGIN_WHITELIST = [
+    'localhost:3000',
+]

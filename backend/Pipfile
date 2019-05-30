@@ -12,6 +12,7 @@ pylint = "*"
 pylint-django = "*"
 autopep8 = "*"
 django-rest-auth = "*"
+django-cors-headers = "*"
 
 [requires]
 python_version = "3.7"
