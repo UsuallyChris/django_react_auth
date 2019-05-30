@@ -42,7 +42,7 @@ INSTALLED_APPS = [
     'rest_framework',
     'rest_framework.authtoken',
     'rest_auth',
-    'cors-headers',
+    'corsheaders',
 
     # LOCAL APPS
     'users.apps.UsersConfig'
@@ -149,5 +149,5 @@ REST_FRAMEWORK = {
 # CORS-HEADERS CONFIG
 
 CORS_ORIGIN_WHITELIST = [
-    'localhost:3000',
+    'http://localhost:3000',
 ]
